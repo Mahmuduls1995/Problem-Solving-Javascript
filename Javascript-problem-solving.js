@@ -215,3 +215,45 @@ function getArraySum (numbers){
 }
 var result= getArraySum (numbers);
 console.log("total Number=",result);
+// .Problem Solve of hotel cost calculation
+
+function hotelCost(day) {
+    var totalCost = 0;
+    if (day <= 10) {           //  for first offer
+        totalCost = day * 100;
+    }
+    else if (day <= 20) {          //for second offer
+        var firstStep = 10 * 100;
+        var remaining = day - 10;
+        var secondStep = remaining * 80;
+        totalCost = firstStep + secondStep;
+    }
+    else {                        //for third offer
+        var firstStep = 10 * 100;
+        var secondStep = 10 * 80;
+        var remaining = day - 20;
+        var thirdStep = remaining * 50;
+        totalCost = firstStep + secondStep + thirdStep;
+    }
+    return totalCost;
+
+}
+
+var result = hotelCost(20);
+console.log(result)
+//.Problem Solve of mega friend 
+function megaFriend(array) {
+    var longest = '';
+    for (var i = 0; i < array.length; i++) {
+        const element = array[i];
+
+        if (element.length > longest.length) {
+            longest = element;
+
+        }
+    }
+    return longest;
+
+}
+console.log(megaFriend(['mammon', 'mohammad', 'sheikhfoysal', 'sahib']));
+

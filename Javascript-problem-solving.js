@@ -1,5 +1,5 @@
 //.Problem Solve number 1
-/*function anaToVori(ana) {
+function anaToVori(ana) {
     if (typeof ana != "number") {
         return 'please give a number';
     }
@@ -91,7 +91,7 @@ function picnicBudget(person) {
 }
 
 var result = picnicBudget(240);
-console.log(result);*/
+console.log(result);
 
 
 //.Problem Solve number 4
@@ -113,5 +113,34 @@ function oddFriend(array) {
 }
 console.log(oddFriend(['Princess', 'Bambino', 'Menace', 'Senorita', 'Stinker']));
 
+//problem Solving Word Count
+var speech ="I am a   good person .I don't snore night";
+var counter=0;
+for (let i = 0; i < speech.length; i++) {
+    const element = speech[i];
+    if (element==" " && speech[i-1]) {
+      counter++;  
+    }
+    
+}
+counter++;
+console.log(counter);
+ console.log(speech.length);
+ console.log(speech[3]);
 
+//problem solving Wood Caculator
+
+function woodCalculator(chairQuantity, tableQuantity, bedQuantity) {
+
+    const perChairWood = 3;
+    const perTableWood = 10;
+    const perBedWood = 50;
+    const chairWoodQuantity = chairQuantity * perChairWood;
+    const tableWoodQuantity = tableQuantity * perTableWood;
+    const bedWoodQuantity = bedQuantity * perBedWood;
+    const totalWood = chairWoodQuantity + tableWoodQuantity + bedWoodQuantity;
+    return totalWood;
+}
+
+console.log(woodCalculator(2, 4, 6));
 

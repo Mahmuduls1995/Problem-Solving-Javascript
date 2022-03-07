@@ -274,3 +274,22 @@ for (const phone of phones) {
     }
 }
 console.log(cheapest);
+//problem solving of febonacchirecursive
+
+function fibonacciRecursive(num){
+    if (num==0) {
+        return [1];
+        
+    }
+    if (num==1) {
+        return [1,1];
+        
+    }
+    var fibo=fibonacciRecursive(num-1);
+    var nextFibo=fibo[num-1]+fibo[num-2];
+    fibo.push(nextFibo);
+    return fibo;
+}
+
+var result = fibonacciRecursive(12);
+console.log(result);

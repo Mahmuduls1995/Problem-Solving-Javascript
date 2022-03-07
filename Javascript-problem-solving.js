@@ -202,3 +202,16 @@ function mularDam(quantity) {
 }
 
 console.log(electricityBill(120));
+// .Problem Solve of  array to total sum
+var numbers=[45,65,43,23,64,43];
+function getArraySum (numbers){
+    var sum=0;
+    for (let i = 0; i < numbers.length; i++) {
+        var element=numbers[i];
+        sum=sum+element;
+        
+    }
+    return sum;
+}
+var result= getArraySum (numbers);
+console.log("total Number=",result);

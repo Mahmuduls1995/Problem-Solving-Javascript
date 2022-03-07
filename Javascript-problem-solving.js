@@ -144,3 +144,37 @@ function woodCalculator(chairQuantity, tableQuantity, bedQuantity) {
 
 console.log(woodCalculator(2, 4, 6));
 
+//Vowel Count in Sentence 
+function vowelCount(sentence) {
+    let count = 0;
+    const vowels = ['a', 'e', 'i', 'o', 'u'];
+
+    for (const letter of sentence) {
+        if (vowels.indexOf(letter) > -1) {
+            count = count + 1;
+
+        }
+    }
+    return count;
+}
+
+console.log(vowelCount('Always be ready for contradictory words while listening'));
+
+//.Problem Solve of price expences
+function mularDam(quantity) {
+    if (typeof quantity != 'number') {
+        return 'Error'
+    }
+    let price;
+    if (quantity <= 2) {
+        price = quantity * 30;
+    }
+    else {
+        price = quantity * 25;
+    }
+    return price;
+ }
+ 
+ console.log(mularDam(8));
+
+ 

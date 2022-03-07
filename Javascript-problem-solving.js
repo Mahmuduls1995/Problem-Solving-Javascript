@@ -177,4 +177,28 @@ function mularDam(quantity) {
  
  console.log(mularDam(8));
 
- 
+ //.Problem Solve of Electricity Bill
+ function electricityBill(unit) {
+    let bill;
+    if (unit <= 100) {
+        bill = unit * 5;
+    } else if (unit > 200) {
+        let firstBill = 100 * 5;
+        let secondBill = 100 * 6;
+        let remainingBill = (unit - 200) * 7;
+        bill = firstBill + secondBill + remainingBill;
+
+    }
+
+    else if (unit > 100) {
+        let firstBill = 100 * 5;
+        let remaining = (unit - 100) * 6;
+        bill = firstBill + remaining;
+
+    }
+
+
+
+}
+
+console.log(electricityBill(120));

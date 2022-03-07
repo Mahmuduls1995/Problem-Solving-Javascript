@@ -257,3 +257,20 @@ function megaFriend(array) {
 }
 console.log(megaFriend(['mammon', 'mohammad', 'sheikhfoysal', 'sahib']));
 
+//.Problem Solve of cheapest Solution
+
+const phones = [
+    { name: 'samsung', price: 45000, camera: 10, storge: 32 },
+    { name: 'nokia', price: 4300, camera: 10, storge: 32 },
+    { name: 'htc', price: 4100, camera: 40, storge: 22 },
+    { name: 'oppo', price: 22000, camera: 10, storge: 82 }
+]
+let cheapest = phones[0];
+
+for (const phone of phones) {
+    if (phone.price < cheapest.price) {
+        cheapest = phone;
+
+    }
+}
+console.log(cheapest);
